@@ -27,7 +27,7 @@
       "metadata": {
         "description": "The name of the owner of the service"
       }
-    }
+    }  
   },
   "variables": {},
   "resources": [
@@ -38,7 +38,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/service.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -55,7 +55,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/users.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -63,7 +63,7 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'serviceTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -73,7 +73,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/groups.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -81,7 +81,7 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'serviceTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -91,7 +91,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/products/product-starter.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -99,8 +99,8 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'serviceTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'groupsTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -110,7 +110,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/groupsUsers.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -118,8 +118,8 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'groupsTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'usersTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -129,7 +129,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/subscriptions.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -137,8 +137,8 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'productStarterTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'usersTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -148,7 +148,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/api-httpbin/api-httpbin.version-set.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -156,7 +156,7 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'serviceTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -166,7 +166,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/api-httpbin/v1/api-httpbin.v1.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -174,8 +174,8 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'productStarterTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'httpBinVersionSetTemplate')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     },
     {
@@ -185,7 +185,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('repoBaseUrl'), '/api-httpbin/v2/api-httpbin.v2.template.json')]",
+          "uri": "[concat(parameters('repoBaseUrl'), '')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
@@ -193,9 +193,9 @@
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'productStarterTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'httpBinVersionSetTemplate')]",
-        "[resourceId('Microsoft.Resources/deployments', 'httpBinV1Template')]"
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]",
+        "[resourceId('Microsoft.Resources/deployments', '')]"
       ]
     }
   ],
