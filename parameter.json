@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "repoBaseUrl": {
+      "value": "http(s)://demo-contoso.azure-api.net/mass"
+    },
+    "publisherEmail": {
+      "value": "admin@contoso.com"
+    },
+    "publisherName": {
+      "value": "Contoso"
+    },
+    "ApimServiceName": {
+      "value": "Demo-Contoso"
+    }
+  }
+}
